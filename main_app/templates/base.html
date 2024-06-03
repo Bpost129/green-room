@@ -19,7 +19,7 @@
 <body>
   <header>
     <div class="header-logo-container">
-      <a href="/">
+      <a href="{% url 'home' %}">
         <img 
           src="{% static 'images/logo-tree2.png' %}"
           alt="The Green Room Logo"
@@ -29,8 +29,17 @@
     </div>
     <nav>
       <ul>
-        <li><a href="/plants">All Plants</a></li>
-        <li><a href="/about">About</a></li>
+        {% if user.is_authenticated %}
+          <li><a href="{% url 'plant-index' %}">All Plants</a></li>
+          <li><a href="{% url 'plant-create' %}">Add Plant</a></li>
+          <li><a href="{% url 'about' %}">About</a></li>
+          <li><a href="{% url 'logout' %}">Log out</a></li>
+        {% else %}
+          <li><a href="{% url 'plant-index' %}">All Plants</a></li>
+          <li><a href="{% url 'about' %}">About</a></li>
+          <li><a href="{% url 'home' %}">Login</a></li>
+          <li><a href="{% url 'signup' %}">Sign Up</a></li>
+        {% endif %}
       </ul>
     </nav>
   </header>
