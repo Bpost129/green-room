@@ -26,11 +26,11 @@ body {
     'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 
     'Helvetica Neue', sans-serif;
   min-height: 100vh;
-  --nav-bg: rgba(104, 197, 248, .7);
-  --nav-bg-ff: rgba(104, 197, 248, .9);
-  --borders: rgb(36, 116, 248) solid 2px;
+  --nav-bg: rgba(44, 158, 78, .7);
+  --nav-bg-ff: rgba(44, 158, 78, 0.9);
+  --borders: rgb(44, 158, 78) solid 2px;
   --text-color: rgb(17, 20, 17);
-  --link-hover-color: rgb(16, 56, 158);
+  --link-hover-color: rgb(21, 108, 47);
   --button-bg: rgb(245, 245, 245);
   --button-bg-hover: rgb(226, 226, 226);
   --submit: rgb(26, 128, 0);
@@ -79,7 +79,7 @@ nav a {
 }
 
 nav a:hover {
-  color: var(--link-hover-color)
+  color: white;/*var(--link-hover-color) */
 }
 
 nav ul {
@@ -245,7 +245,10 @@ nav li {
     margin: 0;
     background: var(--nav-bg-ff);
     border: var(--borders);
+    /* border-left: var(--borders);
+    border-bottom: var(--borders); */
     border-radius: 18px;
+    /* box-shadow: 10px 0 0 rgba(44, 158, 78, .6); */
   }
 
   nav {
@@ -267,7 +270,7 @@ nav li {
 
     nav,
     .header-logo-container {
-      background: rgba(104, 197, 248, .6);
+      background: rgba(44, 158, 78, .6);
       -webkit-backdrop-filter: blur(3px);
       backdrop-filter: blur(3px);
     }
