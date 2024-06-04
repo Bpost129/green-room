@@ -12,7 +12,7 @@ The **Green Room** is a space to share your love for life and see the very thing
 
 ## Attributions
 
-Animations made easy thanks to [Kyle](https://www.youtube.com/watch?v=YszONjKpgg4) from Web Dev Simplified
+Animations made easy thanks to Kyle from [Web Dev Simplified](https://www.youtube.com/watch?v=YszONjKpgg4)
 
 ## Ice-Box
 - [ ] User page
