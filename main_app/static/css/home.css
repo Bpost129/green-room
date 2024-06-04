@@ -57,12 +57,9 @@ main > section {
     transform: translateX(50%);
     opacity: 0;
   }
-  75% {
-    transform: translateX(-5%);
-    opacity: 1;
-  }
   100% {
     transform: translateX(0%);
+    opacity: 1;
   }
 }
 
