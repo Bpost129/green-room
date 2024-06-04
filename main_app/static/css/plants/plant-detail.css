@@ -1,18 +1,36 @@
-body {
+main {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .plant-container {
-  /* padding: 35px 30px; */
+  width: 600px;
+  padding: 35px 30px;
+  margin-top: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
-  border: 3px solid blueviolet;
+  border: var(--borders);
+  box-shadow: var(--card-box-shadow);
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.8);
+  animation: fade-in 1s;
 }
+
+
+@keyframes fade-in {
+  0% {
+    transform: translateX(15%) translateY(-40%) rotate(20deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0%) translateY(0%) rotate(0deg);
+    opacity: 1;
+  }
+}
+
 
 .card-tree {
   height: 200px;
@@ -28,9 +46,9 @@ body {
   border-radius: var(--card-border-radius);
 }
 
-/* .plant-details {
-  width: 98%;
-} */
+.plant-details {
+  margin-left: 62px;
+}
 
 .plant-actions {
   margin-top: 20px;

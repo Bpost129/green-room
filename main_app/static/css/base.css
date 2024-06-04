@@ -76,23 +76,23 @@ nav a {
   text-decoration: none;
   color: var(--text-color);
   font-weight: 600;
-  font-size: 16px;
+  font-size: 18px;
   
+  /* transition: transform; */
 }
 
 nav a:hover {
-
-  animation-name: change-color;
-  animation-duration: 5s;
-  animation-iteration-count: infinite;
+  /* transform: scaleX(1.1); */
+  animation: change-color 500ms ease-out forwards alternate;
+  /* animation-play-state: running; */
+  /* animation-name: change-color;
+  animation-duration: inherit; */
+  
   
 }
 
 @keyframes change-color {
-  10% {
-    color: white;
-  }
-  90% {
+  100% {
     color: white;
   }
 }
@@ -128,7 +128,7 @@ nav li {
 }
 
 .home-tree {
-  height: 400px;
+  height: 500px;
 }
 
 .page-header {

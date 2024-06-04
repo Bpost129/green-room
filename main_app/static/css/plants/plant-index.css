@@ -15,11 +15,13 @@
   box-shadow: var(--card-box-shadow);
   border-radius: 8px;
   background-color: rgba(255, 255, 255, 0.8);
+  
   transition: transform 650ms;
 }
 
 .card:hover {
-  transform: translateY(-5%);
+  transform: translateY(-4%) rotate(1deg);
+  
 }
 
 .card-content {

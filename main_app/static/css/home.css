@@ -21,6 +21,21 @@ main > section {
 
 .logo-container {
   max-width: 375px;
+  animation: fade-in 1500ms ease-in forwards;
+}
+
+@keyframes fade-in {
+  0% {
+    transform: scale(0.4);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 .plant-container {
@@ -34,6 +49,21 @@ main > section {
   align-items: center;
   width: 80%;
   background-color: rgba(255, 255, 255, 0.8);
+  animation: slide-in 1250ms ease-in forwards;
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateX(50%);
+    opacity: 0;
+  }
+  75% {
+    transform: translateX(-5%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0%);
+  }
 }
 
 .login h1 {
