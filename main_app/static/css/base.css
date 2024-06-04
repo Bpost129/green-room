@@ -53,10 +53,6 @@ header {
   border-bottom: var(--borders);
 }
 
-nav {
-  margin: 10px;
-}
-
 ul {
   margin: 0;
   list-style: none;
@@ -70,6 +66,10 @@ main {
 
 h2 {
   font-size: var(--font-xl);
+}
+
+nav {
+  margin: 10px;
 }
 
 nav a {
