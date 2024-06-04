@@ -16,7 +16,7 @@ Animations made easy thanks to [Kyle](https://www.youtube.com/watch?v=YszONjKpgg
 
 ## Ice-Box
 - [ ] User page
-- [ ] Animations
+- [x] Animations
 - [ ] Watering tracker
 - [ ] Image uploads
 - [ ] Filtering
