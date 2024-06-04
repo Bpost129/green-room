@@ -33,7 +33,22 @@
           </div>
           <h2 class="card-title">{{ plant.name }}</h2>
           <h3>{{ plant.plant_type }}</h3>
-          <p>{{ plant.height }} <small>Feet Tall</small> -- {{ plant.age }} <small>Years Old</small></p>
+          <p>
+            {% if not plant.height == 1 %}
+              {{ plant.height }} <small>Feet Tall</small> 🍃
+            {% else %}
+              {{ plant.height }} <small>Foot Tall</small> 🍃
+            {% endif %}
+            {% if plant.age > 0 %}
+              {% if plant.age > 1 %}
+                {{ plant.age }} <small>Years Old</small>
+              {% else %}
+              {{ plant.age }} <small>Year Old</small>
+              {% endif %}
+            {% else %}
+              <small>Seedling</small>
+            {% endif %}
+          </p>
         </div>
       </a>
     </div>

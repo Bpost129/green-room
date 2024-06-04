@@ -5,14 +5,30 @@
   flex-wrap: wrap;
 }
 
+
+
 .card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 275px;
   margin: 10px;
   border: var(--borders);
   box-shadow: var(--card-box-shadow);
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.8);
+  transition: transform 650ms;
+}
+
+.card:hover {
+  transform: translateY(-5%);
 }
 
 .card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   padding: 10px;
   width: 100%;
 }
@@ -28,8 +44,12 @@
 }
 
 .card h2 {
-  margin: 10px 0;
+  margin: 10px 0 0 0;
   font-size: var(--font-xl);
+}
+
+.card h3 {
+  margin: 10px 0 5px 0;
 }
 
 .card p {
@@ -40,3 +60,4 @@
 .card-tree {
   height: 120px;
 }
+

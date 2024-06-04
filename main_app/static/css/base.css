@@ -26,14 +26,15 @@ body {
     'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 
     'Helvetica Neue', sans-serif;
   min-height: 100vh;
+  background-color: rgb(202, 251, 194);
   --nav-bg: rgba(44, 158, 78, .7);
   --nav-bg-ff: rgba(44, 158, 78, 0.9);
   --borders: rgb(44, 158, 78) solid 2px;
   --text-color: rgb(17, 20, 17);
   --link-hover-color: rgb(21, 108, 47);
-  --button-bg: rgb(245, 245, 245);
-  --button-bg-hover: rgb(226, 226, 226);
-  --submit: rgb(26, 128, 0);
+  --button-bg: rgb(9, 68, 27);
+  --button-bg-hover: rgb(21, 108, 47);
+  --submit: rgb(202, 251, 194);
   --warn: rgb(255, 102, 0);
   --danger: rgb(220, 20, 30);
   --secondary: rgb(57, 57, 57);
@@ -43,7 +44,7 @@ body {
   --font-xl: 2.4rem;
   --font-l: 1.8rem;
   --font-reg: 1.6rem;
-  --card-border-radius: 6px;
+  --card-border-radius: 10px;
 }
 
 header {
@@ -76,10 +77,24 @@ nav a {
   color: var(--text-color);
   font-weight: 600;
   font-size: 16px;
+  
 }
 
 nav a:hover {
-  color: white;/*var(--link-hover-color) */
+
+  animation-name: change-color;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  
+}
+
+@keyframes change-color {
+  10% {
+    color: white;
+  }
+  90% {
+    color: white;
+  }
 }
 
 nav ul {
@@ -100,13 +115,27 @@ nav li {
 }
 
 .logo-tree {
-  height: 50px;
+  height: 55px;
+  transition: transform 500ms;
+}
+
+.logo-tree:hover {
+  transform: scale(1.2);
+}
+
+.card-tree {
+  height: 120px;
+}
+
+.home-tree {
+  height: 400px;
 }
 
 .page-header {
   display: flex;
   align-items: center;
-  margin: 20px;
+  margin: 20px 20px 20px 50px;
+  color: var(--button-bg)
 }
 
 .btn {
@@ -125,6 +154,7 @@ nav li {
 
 .btn:hover {
   background-color: var(--button-bg-hover);
+  
 }
 
 .submit {
@@ -138,13 +168,13 @@ nav li {
 }
 
 .warn {
-  color: var(--warn);
-  border-color: var(--warn);
+  color: var(--submit);
+  border-color: var(--submit);
 }
 
 .danger {
-  color: var(--danger);
-  border-color: var(--danger);
+  color: var(--submit);
+  border-color: var(--submit);
 }
 
 .page-header h1 {

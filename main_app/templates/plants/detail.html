@@ -22,7 +22,22 @@
   <div class="plant-details">
     <h1>{{ plant.name }}</h1>
     <h2>{{ plant.plant_type }}</h2>
-    <h3>{{ plant.height }} <small>Feet Tall</small> -- {{ plant.age }} <small>Years Old</small></h3>
+    <h3>
+      {% if not plant.height == 1 %}
+        {{ plant.height }} <small>Feet Tall</small> 🍃
+      {% else %}
+        {{ plant.height }} <small>Foot Tall</small> 🍃
+      {% endif %}
+      {% if plant.age > 0 %}
+        {% if plant.age > 1 %}
+          {{ plant.age }} <small>Years Old</small>
+        {% else %}
+        {{ plant.age }} <small>Year Old</small>
+        {% endif %}
+      {% else %}
+        <small>Seedling</small>
+      {% endif %}
+    </h3>
     {% if user.id == plant.user.id %}
       <div class="plant-actions">
         <a href="{% url 'plant-update' plant.id %}" class="btn warn">Edit</a>
