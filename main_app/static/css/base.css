@@ -49,7 +49,7 @@ body {
 
 header {
   width: 100%;
-  background: var(--nav-bg-ff); /* rgba(104, 197, 248, .9) */
+  background: var(--nav-bg-ff);
   border-bottom: var(--borders);
 }
 
@@ -77,18 +77,10 @@ nav a {
   color: var(--text-color);
   font-weight: 600;
   font-size: 18px;
-  
-  /* transition: transform; */
 }
 
 nav a:hover {
-  /* transform: scaleX(1.1); */
   animation: change-color 500ms ease-out forwards alternate;
-  /* animation-play-state: running; */
-  /* animation-name: change-color;
-  animation-duration: inherit; */
-  
-  
 }
 
 @keyframes change-color {
@@ -275,10 +267,7 @@ nav li {
     margin: 0;
     background: var(--nav-bg-ff);
     border: var(--borders);
-    /* border-left: var(--borders);
-    border-bottom: var(--borders); */
     border-radius: 18px;
-    /* box-shadow: 10px 0 0 rgba(44, 158, 78, .6); */
   }
 
   nav {
